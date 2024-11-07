@@ -100,6 +100,7 @@ const useChatSession = () => {
           ? `${pathname}/ws/socket.io`
           : '/ws/socket.io';
 
+      console.log('Connecting to', uri, path);
       const socket = io(uri, {
         path,
         withCredentials: true,
